@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+h2, h3, p {
+    color: #333;
+    margin: 15px 0;
+}
+
+button {
+    background-color: #3cdb34;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#questionContainer, #feedbackContainer, #resultsContainer {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+}
+#resultsContainer h2 {
+    text-align: center;
+}
+
+#answers {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+#correctAnswerText {
+    font-weight: bold;  
+}
+#feedback {
+    color: red;
+    font-weight: bold;
+}
+
+#answers div {
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#answers div:hover {
+    background-color: #ecf0f1;
+}
+
+#answers img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+button:focus {
+    outline: 6px solid red;
+}
+#rankingTableContainer {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    overflow: auto; /* Para permitir desplazamiento en caso de que el contenido exceda el tamaño del contenedor */
+}
+#rankingTableContainer h2 {
+    text-align: center;
+}
+
+#rankingContainer {
+    max-height: 100%;
+    overflow: auto; /* Para permitir desplazamiento si el contenido de la tabla es muy grande */
+}
+
+table, th, td {
+    border: 1px solid #3498db; /* Establece el color azul para las bordes */
+    text-align: center; /* Centra el contenido dentro de las celdas de la tabla */
+
+}
+
+table {
+    width: 100%;
+    background-color: #fff; /* Establece el fondo blanco */
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px; /* Esto redondea las esquinas de la tabla */
+    overflow: hidden; /* Esto es necesario para que el borde redondeado de la tabla afecte las celdas internas */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#resultsContainer, #rankingTableContainer, #questionContainer, #feedbackContainer {
+    border: 8px solid #3498db;
+    border-radius: 30px;
+}
+body {
+    background-image: url('/wallpaperbetter.com_3840x2160.jpg');
+    background-size: cover;  /* Esto hará que la imagen cubra todo el viewport */
+    background-repeat: no-repeat;  /* Esto evitará que la imagen se repita */
+    background-position: center;  /* Esto centrará la imagen */
+}
+#startBtn  {
+    font-weight: bold;
+    font-size: 2.5em; 
+    padding: 20px 40px;
+    border-radius: 8px;
+    background-color: #8e27ae;
+
+}
+ #showRankingBtn  {
+    font-weight: bold;
+    font-size: 1.5em; 
+    padding: 20px 40px;
+    border-radius: 8px;
+    background-color: #8e27ae;
+
+}
+#startBtn:hover, #showRankingBtn:hover {
+    background-color: #8e27ae;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 400px;
+    border: 8px solid #3498db;
+    border-radius: 30px;
+    text-align: center;
+}
+
+button#submitUsername {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+#usernameInput {
+    width: auto; 
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente si lo necesitas */
+}
+#timerContainer {
+
+    background-color: rgb(0, 255, 26);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border: 8px solid #3498db;
+    border-radius: 30px;
+ }

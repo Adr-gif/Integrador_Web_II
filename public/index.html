@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--<script src="app.js" defer></script> defer le indica a javascript que se cargue despues del DOM-->
+</head>
+<body>
+    
+
+    <button id="startBtn">Empezar</button>
+    <div id="timerContainer">Tiempo: <span id="timer">0</span> seg.</div>
+
+    <div id="questionContainer" hidden>
+        <h2 id="question"></h2>
+        <div id="answers"></div>
+    </div>
+   <div id="feedbackContainer" hidden>
+        <h3 id="feedback"></h3>
+        <p id="correctAnswerText" hidden>La respuesta correcta es: <span id="correctAnswer"></span></p>
+        <button id="nextQuestionBtn">Siguiente pregunta</button>
+    </div>
+    <div id="resultsContainer" hidden>
+        <h2>Resultados del Juego</h2>
+        <p><strong>Correctas: </strong><span id="correctResults"></span></p>
+        <p><strong>Incorrectas: </strong><span id="incorrectResults"></span></p>
+        <p><strong>Total: </strong><span id="totalTime"></span> seg.</p>
+        <p><strong>Promedio por pregunta: </strong><span id="averageTime"></span> seg.</p>
+        <button id="restartBtn">Reiniciar Juego</button>
+    </div>
+    <div id="rankingTableContainer" hidden>
+        <h2>Ranking de Jugadores</h2>
+    
+    <div id="rankingContainer" hidden></div>
+    </div>
+    <button id="showRankingBtn" hidden>Mostrar Ranking</button>
+    <div id="usernameModal" class="modal">
+        <div class="modal-content">
+          <h2>¡Ingresa tu nombre Jugador!</h2>
+          <input type="text" id="usernameInput" placeholder="Tu nombre...">
+          <button id="submitUsername">Enviar</button>
+        </div>
+      </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
