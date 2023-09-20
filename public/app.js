@@ -214,8 +214,11 @@ function saveToServer(username, correctAnswers, duration){
 }
 document.getElementById('submitUsername').addEventListener('click', function() {
     username = document.getElementById('usernameInput').value;
-
-    let alphanumericPattern = /^[a-zA-Z0-9]+$/i;
+    let errorMessage=document.getElementById('errorUsername');
+    document.getElementById('usernameInput').addEventListener('input', function() {
+        errorMessage.style.display="none"; // oculta el mensaje de error cuando el usuario comienza a escribir
+    });
+    let alphanumericPattern = /^[a-zA-ZñÑ]+$/i;//incorpora la letra ñÑ numero no, no existe persona llamada 123 o 22 o 69 ja
 
     if(username.trim()!=="" &&//verifica que se ingrese algo
     username.length>=3 &&//long minima 3
@@ -226,7 +229,10 @@ document.getElementById('submitUsername').addEventListener('click', function() {
         document.getElementById('usernameModal').style.display="none";// oculta el modal
         saveToServer(username, correctCount, duration);// llama a función para guardar los datos en el servidor
     } else{
-        alert("Por favor, ingresa un nombre válido.");
+        errorMessage.textContent= "Por favor, ingresa un nombre válido.";
+        
+        errorMessage.style.display= "block";//muestra el mensaje de err
+        //alert("Por favor, ingresa un nombre válido.");
     }
 });
 function showRanking(){
