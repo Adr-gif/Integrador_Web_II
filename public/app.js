@@ -214,7 +214,15 @@ function saveToServer(username, correctAnswers, duration){
 }
 document.getElementById('submitUsername').addEventListener('click', function() {
     username = document.getElementById('usernameInput').value;
-    if(username.trim()!=="") {// verifica que el usuario haya ingresado un nombre
+
+    let alphanumericPattern = /^[a-zA-Z0-9]+$/i;
+
+    if(username.trim()!=="" &&//verifica que se ingrese algo
+    username.length>=3 &&//long minima 3
+    username.length<=20 &&//long maxima 20
+    alphanumericPattern.test(username) &&//que elk nombre seaalfanumerico
+    username===username.trim()//no espacios    
+    ) {// verifica que el usuario haya ingresado un nombre
         document.getElementById('usernameModal').style.display="none";// oculta el modal
         saveToServer(username, correctCount, duration);// llama a función para guardar los datos en el servidor
     } else{
